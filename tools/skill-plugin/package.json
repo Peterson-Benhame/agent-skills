@@ -1,0 +1,12 @@
+{
+  "name": "@peterson-benhame/skill-plugin",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "dependencies": {
+    "@nx/devkit": "23.1.1",
+    "@peterson-benhame/core": "*"
+  },
+  "generators": "./generators.json"
+}

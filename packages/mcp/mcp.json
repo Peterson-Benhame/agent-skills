@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "agent-skills": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@peterson-benhame/agent-skills-mcp@latest"
+      ]
+    }
+  }
+}
