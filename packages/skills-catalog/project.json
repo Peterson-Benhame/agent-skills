@@ -33,12 +33,7 @@
         "generate-registry"
       ],
       "options": {
-        "commands": [
-          "mkdir -p {projectRoot}/dist",
-          "cp {projectRoot}/package.json {projectRoot}/dist/",
-          "cp {projectRoot}/skills-registry.json {projectRoot}/dist/",
-          "cp -r {projectRoot}/skills {projectRoot}/dist/skills"
-        ],
+        "command": "node -e \"const fs=require('fs'); const path=require('path'); const root='packages/skills-catalog'; const out=path.join(root,'dist'); fs.rmSync(out,{recursive:true,force:true}); fs.mkdirSync(out,{recursive:true}); fs.copyFileSync(path.join(root,'package.json'),path.join(out,'package.json')); fs.copyFileSync(path.join(root,'skills-registry.json'),path.join(out,'skills-registry.json')); fs.cpSync(path.join(root,'skills'),path.join(out,'skills'),{recursive:true});\"",
         "cwd": "{workspaceRoot}",
         "parallel": false
       },

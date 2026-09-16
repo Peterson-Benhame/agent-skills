@@ -879,7 +879,7 @@
     },
     {
       "name": "harness-eval",
-      "description": "Evaluate a repo agent harness (AGENTS.md, rules, skills, skill refs) for broken paths/commands, redundant instructions, and usefulness using a stack-agnostic dual-judge protocol with planted traps. HIGH PRIORITY questionnaires at top: Q1 optional docs, Q2 B/C budget before Track A (certainty/tokens). A always runs after Q2; B/C opt-in. ADRs/RFCs excluded from T2. Mixed apply uses 11-mixed-apply.md (KEEP/CUT). Use when the user says harness eval, harness-eval, harness debug, audit AGENTS.md, audit skills/rules, instruction audit, redundancy of agent instructions, usefulness of skills, Ship/Review/Hold/Slim/Keep-core for harness, or wants Track A/B/C harness evaluation. Do NOT use for harness setup or init, feature spec-driven work (tlc-spec-driven), or applying Ship/Slim trims unless the user explicitly asks after the report.",
+      "description": "Evaluate a repo agent harness (AGENTS.md, rules, skills, skill refs) for broken paths/commands, redundant instructions, and usefulness using a stack-agnostic dual-judge protocol with planted traps. HIGH PRIORITY questionnaires at top: Q1 optional docs, Q2 B/C budget before Track A (certainty/tokens). A always runs after Q2; B/C opt-in. ADRs/RFCs excluded from T2. Mixed apply uses 11-mixed-apply.md (KEEP/CUT). Use when the user says harness eval, harness-eval, harness debug, audit AGENTS.md, audit skills/rules, instruction audit, redundancy of agent instructions, usefulness of skills, Ship/Review/Hold/Slim/Keep-core for harness, or wants Track A/B/C harness evaluation. Do NOT use for harness setup or init, feature spec-driven work (pbs-spec-driven), or applying Ship/Slim trims unless the user explicitly asks after the report.",
       "category": "development",
       "path": "(development)/harness-eval",
       "files": [
@@ -898,7 +898,7 @@
       ],
       "author": "Tech Leads Club - github.com/tech-leads-club",
       "version": "1.8.3",
-      "contentHash": "675761f3fdb123f26103811ffe52e384adff5ffdf7c603578dfaa4eb2e54b2a2"
+      "contentHash": "56f8b1022cf291d3178552b164241e0bae4fd18d9acc59a022f85f606d0c51e4"
     },
     {
       "name": "jira-assistant",
@@ -1143,6 +1143,123 @@
       "author": "Chad Boyda / agent-gtm-skills",
       "version": "1.0.0",
       "contentHash": "3ff5e89d89da30e46eef1d6fa4379aa1b41c30be16e2ca761a5581267c41561e"
+    },
+    {
+      "name": "pbs-discover",
+      "description": "Interviews an unshaped idea into a verdict and a design document with literal decisions for pbs-plan. Use when the user says \"research this\", \"help me understand this problem\", \"should we build this\", \"discovery\", \"explore this problem\", or \"pbs-discover\". Do NOT use when the shape is already decided (pbs-plan), or to implement.",
+      "category": "development",
+      "path": "(development)/pbs-discover",
+      "files": [
+        "references/document-format.md",
+        "SKILL.md"
+      ],
+      "author": "Tech Leads Club - github.com/tech-leads-club",
+      "version": "0.8.0",
+      "contentHash": "80a98f98625a882391a31c1753846ff82b5f1b8d5f437d8bf8041ba34c999e6f"
+    },
+    {
+      "name": "pbs-generative-engine-optimization",
+      "description": "Generative Engine Optimization (GEO) specialist — the technical, on-page publishing work that makes a given page or site discoverable, understandable, trustworthy, quotable, and fresh for AI answer engines (Google AI Overviews, ChatGPT Search, Bing Copilot, Perplexity). Use when asked to 'optimize this page/site for GEO', 'optimize for AI search / answer engines', 'get my page cited by ChatGPT/Perplexity', 'improve AI visibility/citability', 'write an llms.txt', 'add citation-ready structure or schema for AI answers', 'otimizar para busca com IA', or to audit/create/improve a codebase for generative search. Do NOT use for AI-driven SEO content strategy or programmatic pages at scale (use ai-seo), classic keyword/SERP ranking (use seo), accessibility (use web-accessibility), or multi-area site audits (use web-quality-audit).",
+      "category": "quality",
+      "path": "(quality)/pbs-generative-engine-optimization",
+      "files": [
+        "references/measurement-and-tools.md",
+        "references/pillars-and-workflow.md",
+        "SKILL.md",
+        "templates/faqpage.jsonld",
+        "templates/llms.txt",
+        "templates/page-metadata.html",
+        "templates/quotable-article-outline.md",
+        "templates/robots-ai-crawlers.txt",
+        "templates/techarticle.jsonld"
+      ],
+      "author": "Fernando Paladini - github.com/paladini",
+      "version": "1.0.0",
+      "contentHash": "fb6a1f47c1fdee870b7ab4d7995857c572a5bab12242b59a8d8b4aaa4f6982b7"
+    },
+    {
+      "name": "pbs-implement",
+      "description": "Implement a work already planned: extracts a checklist, builds it, and proves every check with an independent verifier. Use when the user says \"extract a checklist\", \"build this ticket\", \"implement this spec\", or \"pbs-implement\". Do NOT use when nobody has decided what to build, or to design the work.",
+      "category": "development",
+      "path": "(development)/pbs-implement",
+      "files": [
+        "references/checklist-format.md",
+        "references/screens.md",
+        "references/test-policy.md",
+        "references/verify.md",
+        "SKILL.md"
+      ],
+      "author": "Tech Leads Club - github.com/tech-leads-club",
+      "version": "0.1.0",
+      "contentHash": "17e212db6e93d15902a69361f6004032733494c0912211c6b1cb5a7830829cdf"
+    },
+    {
+      "name": "pbs-plan",
+      "description": "Turns decided work — a PRD, design doc, RFC, or thread — into tasks a builder can act on without guessing. Finds slices that each prove something, grounds them in the code, and writes intent, observable criteria with concrete values, the boundary, what the change disturbs, and only the decisions that are hard to reverse. Walks every surface the work exposes and sweeps the nine unwritten requirements, recording each landing as a criterion already in the source, existing behaviour, n/a, or Unresolved — never as a criterion the walk invented. Defaults to one task per source. Use when the user says \"write the task\", \"cut this PRD into tasks\", \"turn this design doc into work\", or \"pbs-plan\". Do NOT use for discovery itself or to implement — a one-line ticket is a decision; a blank wish is not.",
+      "category": "development",
+      "path": "(development)/pbs-plan",
+      "files": [
+        "references/document-format.md",
+        "SKILL.md"
+      ],
+      "author": "Tech Leads Club - github.com/tech-leads-club",
+      "version": "0.2.0",
+      "contentHash": "0c7ad174fad9ea80ca0a8ddb6c05ed926b3d6be8f4e89e67a8e1805f2c84cfcc"
+    },
+    {
+      "name": "pbs-spec-driven",
+      "description": "Feature planning and implementation with 4 adaptive phases (Specify, Design, Tasks, Execute). Auto-sizes depth by complexity. Writes testable requirements in EARS notation, atomic tasks, atomic Conventional Commits, and requirement traceability. Ships deterministic Python validation scripts so structural gates are enforced by code, not memory. Features an independent Verifier (author != verifier, evidence-or-zero), a discrimination sensor, a decision log (STATE.md), a test-coverage matrix, and a self-improving lessons layer. Stack-agnostic and tool-agnostic. Use when (1) planning features, (2) implementing with verification and atomic commits, (3) validating an implementation against a spec. Triggers on \"specify feature\", \"discuss feature\", \"design\", \"tasks\", \"implement\", \"validate\", \"verify work\", \"UAT\", \"record decision\", \"pause work\", \"resume work\". Do NOT use for pure architecture decomposition analysis or standalone technical design documents.",
+      "category": "development",
+      "path": "(development)/pbs-spec-driven",
+      "files": [
+        "references/code-analysis.md",
+        "references/coding-principles.md",
+        "references/context-limits.md",
+        "references/design.md",
+        "references/discuss.md",
+        "references/implement.md",
+        "references/lessons.md",
+        "references/memory.md",
+        "references/specify.md",
+        "references/sub-agents.md",
+        "references/tasks.md",
+        "references/validate.md",
+        "scripts/check_commit.py",
+        "scripts/lessons.py",
+        "scripts/validate_spec.py",
+        "scripts/validate_state.py",
+        "scripts/validate_tasks.py",
+        "SKILL.md"
+      ],
+      "author": "Felipe Rodrigues - github.com/felipfr",
+      "version": "3.3.0",
+      "contentHash": "28adf341863fdb15339a6cfb9537b11e5220de80f1578ec7dd679ca58be105e7"
+    },
+    {
+      "name": "pbs-spec-lean",
+      "description": "Spec-driven feature work that freezes obligations instead of the plan: one human-reviewed plan with EARS criteria, path, entities, interface and one-way doors, then proof-backed checks, then build, then an independent Verifier. Use when the user says \"pbs-spec-lean\", \"plan feature\", \"specify feature\", \"write the checks\", \"build this plan\", or \"verify work\". Do NOT use for standalone design documents unattached to a feature, architecture decomposition analysis, or work that already has a task list or checklist to execute.",
+      "category": "development",
+      "path": "(development)/pbs-spec-lean",
+      "files": [
+        "references/build.md",
+        "references/checks.md",
+        "references/memory.md",
+        "references/plan.md",
+        "references/verify.md",
+        "scripts/check_commit.py",
+        "scripts/fixtures/checks.md",
+        "scripts/fixtures/plan.md",
+        "scripts/fixtures/verification.md",
+        "scripts/lessons.py",
+        "scripts/selftest.py",
+        "scripts/validate_checks.py",
+        "scripts/validate_plan.py",
+        "scripts/validate_verification.py",
+        "SKILL.md"
+      ],
+      "author": "Tech Leads Club - github.com/tech-leads-club",
+      "version": "1.0.0",
+      "contentHash": "99a9804bf10a8de9fdad3231d4ac82c1e2440ab087f77de19d5b51722bf68e31"
     },
     {
       "name": "perf-astro",
@@ -1535,7 +1652,7 @@
     },
     {
       "name": "spec-driven-eval",
-      "description": "Scores how completely an implementation fulfills a PRD/spec, case by case, and produces a single comparable final grade. Invoke only when explicitly named (e.g. run spec-driven-eval); do not auto-trigger. Use when benchmarking spec-driven implementations, grading acceptance criteria, evaluating whether a feature was 100% implemented, comparing multiple implementations of the same PRD, or auditing implementation and test coverage (unit and e2e) against product requirements. Do NOT use for planning or building features (use tlc-spec-driven), writing PRDs, or general code review unrelated to a spec.",
+      "description": "Scores how completely an implementation fulfills a PRD/spec, case by case, and produces a single comparable final grade. Invoke only when explicitly named (e.g. run spec-driven-eval); do not auto-trigger. Use when benchmarking spec-driven implementations, grading acceptance criteria, evaluating whether a feature was 100% implemented, comparing multiple implementations of the same PRD, or auditing implementation and test coverage (unit and e2e) against product requirements. Do NOT use for planning or building features (use pbs-spec-driven), writing PRDs, or general code review unrelated to a spec.",
       "category": "development",
       "path": "(development)/spec-driven-eval",
       "files": [
@@ -1545,7 +1662,7 @@
       ],
       "author": "Waldemar Neto - github.com/waldemarnt",
       "version": "1.0.0",
-      "contentHash": "168d6860c6e84809a02c2abface032a4a625bdd81fec6131615e00a2cf87e311"
+      "contentHash": "582ab4642d5781574c5d213b8c3a8887cfa2a3d5e8a90e96f8c4f9b129c06772"
     },
     {
       "name": "subagent-creator",
@@ -1631,123 +1748,6 @@
       "author": "Felipe Rodrigues - github.com/felipfr",
       "version": "1.0.0",
       "contentHash": "04b3931496ca41463620a960aee92babac280987d7621a9ab80f7d9ee158d229"
-    },
-    {
-      "name": "tlc-discover",
-      "description": "Interviews an unshaped idea into a verdict and a design document with literal decisions for tlc-plan. Use when the user says \"research this\", \"help me understand this problem\", \"should we build this\", \"discovery\", \"explore this problem\", or \"tlc-discover\". Do NOT use when the shape is already decided (tlc-plan), or to implement.",
-      "category": "development",
-      "path": "(development)/tlc-discover",
-      "files": [
-        "references/document-format.md",
-        "SKILL.md"
-      ],
-      "author": "Tech Leads Club - github.com/tech-leads-club",
-      "version": "0.8.0",
-      "contentHash": "a00cd1b2c150cd274f8207ae2fb22af25926ba550ad20d5100131efeaad0bfd8"
-    },
-    {
-      "name": "tlc-generative-engine-optimization",
-      "description": "Generative Engine Optimization (GEO) specialist — the technical, on-page publishing work that makes a given page or site discoverable, understandable, trustworthy, quotable, and fresh for AI answer engines (Google AI Overviews, ChatGPT Search, Bing Copilot, Perplexity). Use when asked to 'optimize this page/site for GEO', 'optimize for AI search / answer engines', 'get my page cited by ChatGPT/Perplexity', 'improve AI visibility/citability', 'write an llms.txt', 'add citation-ready structure or schema for AI answers', 'otimizar para busca com IA', or to audit/create/improve a codebase for generative search. Do NOT use for AI-driven SEO content strategy or programmatic pages at scale (use ai-seo), classic keyword/SERP ranking (use seo), accessibility (use web-accessibility), or multi-area site audits (use web-quality-audit).",
-      "category": "quality",
-      "path": "(quality)/tlc-generative-engine-optimization",
-      "files": [
-        "references/measurement-and-tools.md",
-        "references/pillars-and-workflow.md",
-        "SKILL.md",
-        "templates/faqpage.jsonld",
-        "templates/llms.txt",
-        "templates/page-metadata.html",
-        "templates/quotable-article-outline.md",
-        "templates/robots-ai-crawlers.txt",
-        "templates/techarticle.jsonld"
-      ],
-      "author": "Fernando Paladini - github.com/paladini",
-      "version": "1.0.0",
-      "contentHash": "0ffb82a6d58cbb4f7f265a29601971bd302322ef89c4392f25278376200596df"
-    },
-    {
-      "name": "tlc-implement",
-      "description": "Implement a work already planned: extracts a checklist, builds it, and proves every check with an independent verifier. Use when the user says \"extract a checklist\", \"build this ticket\", \"implement this spec\", or \"tlc-implement\". Do NOT use when nobody has decided what to build, or to design the work.",
-      "category": "development",
-      "path": "(development)/tlc-implement",
-      "files": [
-        "references/checklist-format.md",
-        "references/screens.md",
-        "references/test-policy.md",
-        "references/verify.md",
-        "SKILL.md"
-      ],
-      "author": "Tech Leads Club - github.com/tech-leads-club",
-      "version": "0.1.0",
-      "contentHash": "b3bbd69d067b042072e9538ea5edc90db28b0873fdf4d86157ca4ae5363bfd9e"
-    },
-    {
-      "name": "tlc-plan",
-      "description": "Turns decided work — a PRD, design doc, RFC, or thread — into tasks a builder can act on without guessing. Finds slices that each prove something, grounds them in the code, and writes intent, observable criteria with concrete values, the boundary, what the change disturbs, and only the decisions that are hard to reverse. Walks every surface the work exposes and sweeps the nine unwritten requirements, recording each landing as a criterion already in the source, existing behaviour, n/a, or Unresolved — never as a criterion the walk invented. Defaults to one task per source. Use when the user says \"write the task\", \"cut this PRD into tasks\", \"turn this design doc into work\", or \"tlc-plan\". Do NOT use for discovery itself or to implement — a one-line ticket is a decision; a blank wish is not.",
-      "category": "development",
-      "path": "(development)/tlc-plan",
-      "files": [
-        "references/document-format.md",
-        "SKILL.md"
-      ],
-      "author": "Tech Leads Club - github.com/tech-leads-club",
-      "version": "0.2.0",
-      "contentHash": "428b064742db100add4d42612ce61eaed040aad87e6718e494a09ad9ae03552b"
-    },
-    {
-      "name": "tlc-spec-driven",
-      "description": "Feature planning and implementation with 4 adaptive phases (Specify, Design, Tasks, Execute). Auto-sizes depth by complexity. Writes testable requirements in EARS notation, atomic tasks, atomic Conventional Commits, and requirement traceability. Ships deterministic Python validation scripts so structural gates are enforced by code, not memory. Features an independent Verifier (author != verifier, evidence-or-zero), a discrimination sensor, a decision log (STATE.md), a test-coverage matrix, and a self-improving lessons layer. Stack-agnostic and tool-agnostic. Use when (1) planning features, (2) implementing with verification and atomic commits, (3) validating an implementation against a spec. Triggers on \"specify feature\", \"discuss feature\", \"design\", \"tasks\", \"implement\", \"validate\", \"verify work\", \"UAT\", \"record decision\", \"pause work\", \"resume work\". Do NOT use for pure architecture decomposition analysis or standalone technical design documents.",
-      "category": "development",
-      "path": "(development)/tlc-spec-driven",
-      "files": [
-        "references/code-analysis.md",
-        "references/coding-principles.md",
-        "references/context-limits.md",
-        "references/design.md",
-        "references/discuss.md",
-        "references/implement.md",
-        "references/lessons.md",
-        "references/memory.md",
-        "references/specify.md",
-        "references/sub-agents.md",
-        "references/tasks.md",
-        "references/validate.md",
-        "scripts/check_commit.py",
-        "scripts/lessons.py",
-        "scripts/validate_spec.py",
-        "scripts/validate_state.py",
-        "scripts/validate_tasks.py",
-        "SKILL.md"
-      ],
-      "author": "Felipe Rodrigues - github.com/felipfr",
-      "version": "3.3.0",
-      "contentHash": "9f4c793556001f3210a2d9fe3b41bf24e82e581c522d8dd50f65addfee169a29"
-    },
-    {
-      "name": "tlc-spec-lean",
-      "description": "Spec-driven feature work that freezes obligations instead of the plan: one human-reviewed plan with EARS criteria, path, entities, interface and one-way doors, then proof-backed checks, then build, then an independent Verifier. Use when the user says \"tlc-spec-lean\", \"plan feature\", \"specify feature\", \"write the checks\", \"build this plan\", or \"verify work\". Do NOT use for standalone design documents unattached to a feature, architecture decomposition analysis, or work that already has a task list or checklist to execute.",
-      "category": "development",
-      "path": "(development)/tlc-spec-lean",
-      "files": [
-        "references/build.md",
-        "references/checks.md",
-        "references/memory.md",
-        "references/plan.md",
-        "references/verify.md",
-        "scripts/check_commit.py",
-        "scripts/fixtures/checks.md",
-        "scripts/fixtures/plan.md",
-        "scripts/fixtures/verification.md",
-        "scripts/lessons.py",
-        "scripts/selftest.py",
-        "scripts/validate_checks.py",
-        "scripts/validate_plan.py",
-        "scripts/validate_verification.py",
-        "SKILL.md"
-      ],
-      "author": "Tech Leads Club - github.com/tech-leads-club",
-      "version": "1.0.0",
-      "contentHash": "af264d73172a488bab93cb76366df411cee8631800480fbca4add00dd72bbd8b"
     },
     {
       "name": "vercel-deploy",
@@ -1840,9 +1840,9 @@
     },
     {
       "name": "megabrain",
-      "message": "megabrain was a temporary name for tlc-spec-driven v3. Use tlc-spec-driven instead.",
+      "message": "megabrain was a temporary name for pbs-spec-driven v3. Use pbs-spec-driven instead.",
       "alternatives": [
-        "tlc-spec-driven"
+        "pbs-spec-driven"
       ]
     },
     {

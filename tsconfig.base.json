@@ -23,12 +23,12 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-  "paths": {
+    "paths": {
       "@peterson-benhame/agent-skills": [
-        "packages/cli/src/index.ts"
+        "./packages/cli/src/index.ts"
       ],
       "@peterson-benhame/core": [
-        "libs/core/src/index.ts"
+        "./libs/core/src/index.ts"
       ]
     }
   },
