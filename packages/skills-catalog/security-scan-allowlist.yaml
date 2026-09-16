@@ -199,7 +199,7 @@ entries:
   # Skills for GitHub integration, PR management, and development workflows
   # ============================================================================
 
-  - skill: tlc-spec-driven
+  - skill: pbs-spec-driven
     code: W011
     reason: >
       The skill's methodology explicitly requires web search and external documentation review
@@ -214,7 +214,7 @@ entries:
       The skill instructs loading bundled reference files (references/*.md) and applying
       official NestJS architectural patterns. On-demand documentation is core to the skill;
       the scanner conflates this with untrusted third-party ingestion—same intent as
-      codenavi and tlc-spec-driven (framework guidance), scoped to repo-local references.
+      codenavi and pbs-spec-driven (framework guidance), scoped to repo-local references.
     allowedBy: felipefr
     allowedAt: "2026-04-01"
 

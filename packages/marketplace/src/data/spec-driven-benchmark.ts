@@ -211,7 +211,7 @@ export interface ModelBenchmarkData {
 }
 
 export const modelBenchmark: ModelBenchmarkData = {
-  framework: 'tlc-spec-driven (v3)',
+  framework: 'pbs-spec-driven (v3)',
   specCompleteThreshold: 0.9,
   models: [
     {

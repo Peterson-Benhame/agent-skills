@@ -1,6 +1,6 @@
 ---
-name: tlc-discover
-description: 'Interviews an unshaped idea into a verdict and a design document with literal decisions for tlc-plan. Use when the user says "research this", "help me understand this problem", "should we build this", "discovery", "explore this problem", or "tlc-discover". Do NOT use when the shape is already decided (tlc-plan), or to implement.'
+name: pbs-discover
+description: 'Interviews an unshaped idea into a verdict and a design document with literal decisions for pbs-plan. Use when the user says "research this", "help me understand this problem", "should we build this", "discovery", "explore this problem", or "pbs-discover". Do NOT use when the shape is already decided (pbs-plan), or to implement.'
 license: CC-BY-4.0
 metadata:
   author: Tech Leads Club - github.com/tech-leads-club
@@ -21,7 +21,7 @@ SITUATION ────→ PROBLEM ───────→ VERDICT ────�
 
 The failure that matters here is not inventing a fact, it is **converging early**: proposing a solution on turn two, hearing "sure", and manufacturing a decision that has all the authority of one and none of the examination. Everything below exists to make that harder.
 
-The artifact is a design document humans read, not only the next skill. If Shape cannot tell a reader what will exist in the repository, or Roadmap which blocks are clear, it failed even with Decisions complete. This skill feeds tlc-plan.
+The artifact is a design document humans read, not only the next skill. If Shape cannot tell a reader what will exist in the repository, or Roadmap which blocks are clear, it failed even with Decisions complete. This skill feeds pbs-plan.
 
 ## Critical rules
 
@@ -103,7 +103,7 @@ It follows the evidence because a number changes which states are worth the trou
 
 Every real sequence has more states than the happy one anybody describes. Empty, first time, the retry, the half-finished, the expired, the unauthorised, the one where the user walks away and comes back tomorrow. Go and find them, put them to the user as concrete questions, and record what they decide.
 
-These are **product** edge cases: what *should* happen. Concurrency, observability, idempotency and the rest of the engineering cross-cutting concerns are swept by **tlc-plan**, against the code, and duplicating them here produces two lists that drift. The line is clean: if answering it needs a product opinion, it belongs here; if it needs the repository, it belongs there.
+These are **product** edge cases: what *should* happen. Concurrency, observability, idempotency and the rest of the engineering cross-cutting concerns are swept by **pbs-plan**, against the code, and duplicating them here produces two lists that drift. The line is clean: if answering it needs a product opinion, it belongs here; if it needs the repository, it belongs there.
 
 ### Bound the round
 
@@ -247,12 +247,12 @@ Actions:
 1. Record the committed decision in Situation. Do not restage the verdict.
 2. Interview journey states and evidence that still affect shape.
 3. Open the repository before proposing. Two shapes, costed here. Write `.design/<name>.md`.
-Result: Verdict line is "already committed — see Situation". Shape and Decisions are filled. tlc-plan can copy the literals.
+Result: Verdict line is "already committed — see Situation". Shape and Decisions are filled. pbs-plan can copy the literals.
 
 ### Example 3: Wrong skill
 
 User says: "Cut this design doc into tasks."
-Actions: Do not run this skill. That is tlc-plan.
+Actions: Do not run this skill. That is pbs-plan.
 Result: hand off; no `.design/` file from this skill.
 
 ## Common failures

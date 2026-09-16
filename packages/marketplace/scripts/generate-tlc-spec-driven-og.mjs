@@ -5,7 +5,7 @@ import { Resvg } from '@resvg/resvg-js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const publicDir = join(__dirname, '../public')
-const logoSvg = readFileSync(join(publicDir, 'tlc-logo-dark.svg'), 'utf8')
+const logoSvg = readFileSync(join(publicDir, 'pbs-logo-dark.svg'), 'utf8')
 const logoMatch = logoSvg.match(/<svg[\s\S]*<\/svg>/)
 const logoInner = logoMatch?.[0]?.replace(/^<svg[^>]*>/, '').replace(/<\/svg>$/, '') ?? ''
 
@@ -136,7 +136,7 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
     <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
       <path d="M48 0H0V48" stroke="#334155" stroke-opacity="0.22" stroke-width="0.75"/>
     </pattern>
-    <clipPath id="tlc-icon">
+    <clipPath id="pbs-icon">
       <rect x="0" y="0" width="182" height="202"/>
     </clipPath>
   </defs>
@@ -153,7 +153,7 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
 
   <rect x="80" y="80" width="1040" height="470" rx="28" stroke="#334155" stroke-opacity="0.55" stroke-width="1.5"/>
 
-  <g transform="translate(1040, ${BADGE_CY - 19}) scale(0.19)" clip-path="url(#tlc-icon)">
+  <g transform="translate(1040, ${BADGE_CY - 19}) scale(0.19)" clip-path="url(#pbs-icon)">
     ${logoInner}
   </g>
 
@@ -181,5 +181,5 @@ const resvg = new Resvg(svg, {
   fitTo: { mode: 'width', value: 1200 },
 })
 const pngData = resvg.render().asPng()
-writeFileSync(join(publicDir, 'og-tlc-spec-driven.png'), pngData)
-console.log('Wrote packages/marketplace/public/og-tlc-spec-driven.png')
+writeFileSync(join(publicDir, 'og-pbs-spec-driven.png'), pngData)
+console.log('Wrote packages/marketplace/public/og-pbs-spec-driven.png')

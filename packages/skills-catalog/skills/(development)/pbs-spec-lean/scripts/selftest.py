@@ -208,7 +208,7 @@ NEGATIVE_CONTROLS = [
 
 
 def scaffold():
-    root = tempfile.mkdtemp(prefix="tlc-spec-lean-selftest-")
+    root = tempfile.mkdtemp(prefix="pbs-spec-lean-selftest-")
     fdir = os.path.join(root, ".specs", "features", FEATURE)
     os.makedirs(fdir)
     for name in ("plan.md", "checks.md", "verification.md"):

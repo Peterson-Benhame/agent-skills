@@ -10,7 +10,7 @@ describe('stripInlineMarkdown', () => {
 
 describe('humanizeSkillId', () => {
   it('title-cases kebab-case ids', () => {
-    expect(humanizeSkillId('tlc-spec-driven')).toBe('Tlc Spec Driven')
+    expect(humanizeSkillId('pbs-spec-driven')).toBe('Tlc Spec Driven')
     expect(humanizeSkillId('accessibility')).toBe('Accessibility')
   })
 })

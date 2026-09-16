@@ -36,9 +36,9 @@
     - excalidraw-studio
 
 - name: megabrain
-  message: megabrain was a temporary name for tlc-spec-driven v3. Use tlc-spec-driven instead.
+  message: megabrain was a temporary name for pbs-spec-driven v3. Use pbs-spec-driven instead.
   alternatives:
-    - tlc-spec-driven
+    - pbs-spec-driven
 
 - name: pr-review
   message: Use the-judge instead. pr-review was an adaptive multi-agent PR review orchestrator; the-judge is the evidence-gated replacement.

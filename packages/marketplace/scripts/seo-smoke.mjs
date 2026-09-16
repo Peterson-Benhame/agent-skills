@@ -135,17 +135,17 @@ if (!title || !title.includes(accessibility.name)) {
   fail(`accessibility <title> "${title}" does not include display name "${accessibility.name}"`)
 }
 
-const tlcPage = read('skills/tlc-spec-driven/index.html')
+const tlcPage = read('skills/pbs-spec-driven/index.html')
 const bad = badRelativeDocHrefs(tlcPage)
 if (bad.length > 0) {
-  fail(`tlc-spec-driven has unsafe relative doc hrefs: ${bad.slice(0, 8).join(', ')}`)
+  fail(`pbs-spec-driven has unsafe relative doc hrefs: ${bad.slice(0, 8).join(', ')}`)
 }
 if (!hasVisibleDocLabel(tlcPage, 'implement.md')) {
-  fail('tlc-spec-driven missing visible neutralized label implement.md (text/code)')
+  fail('pbs-spec-driven missing visible neutralized label implement.md (text/code)')
 }
 const absoluteGithub = [...tlcPage.matchAll(/\bhref="(https:\/\/github\.com\/[^"]+)"/gi)].map((m) => m[1])
 if (absoluteGithub.length === 0) {
-  fail('tlc-spec-driven missing retained absolute GitHub <a href="https://…">')
+  fail('pbs-spec-driven missing retained absolute GitHub <a href="https://…">')
 }
 
 const ORIGIN = 'https://agent-skills.techleads.club'
@@ -158,25 +158,25 @@ assertCanonical('categories/security/index.html', `${ORIGIN}/categories/security
 assertCanonical('agents/index.html', `${ORIGIN}/agents/`)
 assertCanonical('agents/cursor/index.html', `${ORIGIN}/agents/cursor/`)
 assertCanonical('about/index.html', `${ORIGIN}/about/`)
-assertCanonical('tlc-spec-driven/index.html', `${ORIGIN}/tlc-spec-driven/`)
-assertCanonical('tlc-ai-dev-flow/index.html', `${ORIGIN}/tlc-ai-dev-flow/`)
+assertCanonical('pbs-spec-driven/index.html', `${ORIGIN}/pbs-spec-driven/`)
+assertCanonical('pbs-ai-dev-flow/index.html', `${ORIGIN}/pbs-ai-dev-flow/`)
 
 assertSchema('index.html', ['Organization', 'WebSite'])
-assertSchema('tlc-ai-dev-flow/index.html', ['Organization', 'WebSite', 'CollectionPage', 'BreadcrumbList'])
+assertSchema('pbs-ai-dev-flow/index.html', ['Organization', 'WebSite', 'CollectionPage', 'BreadcrumbList'])
 assertSchema('skills/accessibility/index.html', ['Organization', 'TechArticle', 'BreadcrumbList'])
 assertSchema('categories/security/index.html', ['Organization', 'CollectionPage', 'BreadcrumbList'])
 assertSchema('agents/cursor/index.html', ['Organization', 'HowTo', 'BreadcrumbList'])
 
-const flowLanding = read('tlc-ai-dev-flow/index.html')
-if (countH1(flowLanding) !== 1) fail(`tlc-ai-dev-flow H1 count ${countH1(flowLanding)}, expected 1`)
+const flowLanding = read('pbs-ai-dev-flow/index.html')
+if (countH1(flowLanding) !== 1) fail(`pbs-ai-dev-flow H1 count ${countH1(flowLanding)}, expected 1`)
 const flowTitle = documentTitle(flowLanding)
 if (!flowTitle || !flowTitle.includes('TLC AI Dev Flow')) {
-  fail(`tlc-ai-dev-flow <title> "${flowTitle}" does not include TLC AI Dev Flow`)
+  fail(`pbs-ai-dev-flow <title> "${flowTitle}" does not include TLC AI Dev Flow`)
 }
 const flowDescription = metaDescription(flowLanding)
-if (!flowDescription) fail('tlc-ai-dev-flow has no meta description')
+if (!flowDescription) fail('pbs-ai-dev-flow has no meta description')
 if (flowDescription.length > 161) {
-  fail(`tlc-ai-dev-flow meta description is ${flowDescription.length} chars (limit 160)`)
+  fail(`pbs-ai-dev-flow meta description is ${flowDescription.length} chars (limit 160)`)
 }
 
 const seenDescriptions = new Map()
@@ -198,8 +198,8 @@ const expectedUrls = [
   `${ORIGIN}/skills/`,
   `${ORIGIN}/categories/`,
   `${ORIGIN}/agents/`,
-  `${ORIGIN}/tlc-spec-driven/`,
-  `${ORIGIN}/tlc-ai-dev-flow/`,
+  `${ORIGIN}/pbs-spec-driven/`,
+  `${ORIGIN}/pbs-ai-dev-flow/`,
   ...data.skills.map((skill) => `${ORIGIN}/skills/${skill.id}/`),
   ...data.agents.map((agent) => `${ORIGIN}/agents/${agent.id}/`),
 ]
@@ -233,8 +233,8 @@ if (!llms.startsWith('# Agent Skills\n\n> ')) {
 for (const skill of data.skills) {
   if (!llms.includes(`${ORIGIN}/skills/${skill.id}/`)) fail(`llms.txt missing ${skill.id}`)
 }
-if (!llms.includes(`${ORIGIN}/tlc-ai-dev-flow/`)) fail('llms.txt missing TLC AI Dev Flow landing')
-if (!llms.includes(`${ORIGIN}/tlc-spec-driven/`)) fail('llms.txt missing TLC Spec-Driven landing')
+if (!llms.includes(`${ORIGIN}/pbs-ai-dev-flow/`)) fail('llms.txt missing TLC AI Dev Flow landing')
+if (!llms.includes(`${ORIGIN}/pbs-spec-driven/`)) fail('llms.txt missing TLC Spec-Driven landing')
 
 if (!/name="robots" content="noindex/i.test(read('404.html'))) {
   fail('404.html is missing a noindex robots directive')
@@ -252,5 +252,5 @@ console.log(`  category hubs: ${categoriesWithSkills.size} populated categories 
 console.log('SEO smoke OK')
 console.log(`  /skills/ unique skill links: ${hubLinks.size} (skills: ${skillCount})`)
 console.log(`  accessibility title/H1: ${title} / ${h1Text}`)
-console.log('  tlc-spec-driven: zero relative .md / references/ hrefs; labels + GitHub <a> retained')
-console.log('  tlc-ai-dev-flow: canonical, CollectionPage schema, llms.txt')
+console.log('  pbs-spec-driven: zero relative .md / references/ hrefs; labels + GitHub <a> retained')
+console.log('  pbs-ai-dev-flow: canonical, CollectionPage schema, llms.txt')

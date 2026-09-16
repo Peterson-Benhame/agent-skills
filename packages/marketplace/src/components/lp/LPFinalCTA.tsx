@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { CopyButton } from '../CopyButton'
 
-const INSTALL_CMD = 'npx @peterson-benhame/agent-skills install --skill tlc-spec-driven'
+const INSTALL_CMD = 'npx @peterson-benhame/agent-skills install --skill pbs-spec-driven'
 
 export function LPFinalCTA() {
   return (
@@ -42,7 +42,7 @@ export function LPFinalCTA() {
           </a>
           <span className="text-gray-300 dark:text-gray-700">·</span>
           <Link
-            href="/skills/tlc-spec-driven"
+            href="/skills/pbs-spec-driven"
             className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 font-medium transition-colors"
           >
             View skill details →

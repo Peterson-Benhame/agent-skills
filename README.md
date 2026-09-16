@@ -36,22 +36,22 @@
   Extend <b>Antigravity</b>, <b>Claude Code</b>, <b>Cursor</b>, and more with absolute confidence.
 </p>
 
-<p align="center">
-  <a href="https://tech-leads-club.github.io/agent-skills/" target="_blank">https://tech-leads-club.github.io/agent-skills/</a>
-</p>
 
 ## 📖 Table of Contents
 
+- [📖 Table of Contents](#-table-of-contents)
 - [✨ What are Skills?](#-what-are-skills)
-- [🛡️ Security & Trust](#️-security--trust)
+- [🛡️ Security \& Trust](#️-security--trust)
 - [🤖 Supported Agents](#-supported-agents)
 - [🌟 Featured Skills](#-featured-skills)
 - [🚀 Quick Start](#-quick-start)
+  - [Install Skills in Your Project](#install-skills-in-your-project)
+  - [CLI Options](#cli-options)
+  - [Global Installation (Optional)](#global-installation-optional)
 - [⚡ How It Works](#-how-it-works)
+  - [Caching](#caching)
 - [🔌 MCP Server](#-mcp-server)
-- [🤝 Contributing](#-contributing)
-- [🛡️ Content & Authorship](#️-content--authorship)
-- [📄 License and Attribution](#-license-and-attribution)
+- [Créditos e licenças](#créditos-e-licenças)
 
 ## ✨ What are Skills?
 
@@ -102,7 +102,7 @@ A glimpse of what's available in our growing catalog:
 
 | Skill                                                                                              | Category    | Description                                                                                                                                                                        |
 | -------------------------------------------------------------------------------------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **[tlc-spec-driven](<packages/skills-catalog/skills/(development)/tlc-spec-driven>)**              | Development | Project and feature planning with 4 phases: Specify → Design → Tasks → Implement. Creates atomic tasks with verification criteria and maintains persistent memory across sessions. |
+| **[pbs-spec-driven](<packages/skills-catalog/skills/(development)/pbs-spec-driven>)**              | Development | Project and feature planning with 4 phases: Specify → Design → Tasks → Implement. Creates atomic tasks with verification criteria and maintains persistent memory across sessions. |
 | **[aws-advisor](<packages/skills-catalog/skills/(cloud)/aws-advisor>)**                            | Cloud       | Expert AWS Cloud Advisor for architecture design, security review, and implementation guidance. Leverages AWS MCP tools for documentation-backed answers.                          |
 | **[playwright-skill](<packages/skills-catalog/skills/(web-automation)/playwright-skill>)**         | Automation  | Complete browser automation with Playwright. Test pages, fill forms, take screenshots, validate UX, and automate any browser task.                                                 |
 | **[figma](<packages/skills-catalog/skills/(design)/figma>)**                                       | Design      | Fetch design context from Figma and translate nodes into production code. Design-to-code implementation with MCP integration.                                                      |
@@ -144,7 +144,7 @@ agent-skills list
 agent-skills ls        # Alias
 
 # Install one skill
-agent-skills install -s tlc-spec-driven
+agent-skills install -s pbs-spec-driven
 
 # Install multiple skills at once
 agent-skills install -s aws-advisor coding-guidelines docs-writer
@@ -253,34 +253,12 @@ rm -rf ~/.cache/agent-skills
 
 → Full setup for all clients (Cursor, Claude Code, VS Code, etc.), caching, and error reference: **[packages/mcp/README.md](packages/mcp/README.md)**
 
-## 🤝 Contributing
+## Créditos e licenças
 
-We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) file for detailed guidelines on how to set up your local environment, create new skills, contribute to the marketplace, and follow our release processes.
+Este projeto é um fork do Agent Skills, originalmente desenvolvido e distribuído
+pela Tech Leads Club.
 
-## 🛡️ Content & Authorship
-
-This repository is a collection of curated skills intended to benefit the community. We deeply respect the intellectual property and wishes of all creators.
-
-If you are the author of any content included here and would like it **removed** or **updated**, please [open an issue](https://github.com/tech-leads-club/agent-skills/issues/new) or contact the maintainers.
-
-## 📄 License and Attribution
-
-- **Software Engine:** The application source code (CLI, scripts, tools) is licensed under the **[MIT License](LICENSE)**.
-- **Tech Leads Club Skills:** Unless otherwise stated, all skill files (`SKILL.md`) authored by the repository maintainers are licensed under the **[Creative Commons Attribution 4.0 International License (CC-BY-4.0)](https://creativecommons.org/licenses/by/4.0/)**.
-- **Third-Party Skills:** Some skills included in this catalog are created by the community or original authors. These skills retain their original licenses and copyrights. Please check the individual `SKILL.md` files for specific licensing and author attribution.
-
-_If you use our skills catalog, you **must** provide attribution to Tech Leads Club, regardless of how it is used._
-
-## ⭐ Star History
-
-<p align="center">
-  <a href="https://star-history.com/#tech-leads-club/agent-skills&Date">
-    <img src="https://api.star-history.com/svg?repos=tech-leads-club/agent-skills&type=Date" alt="Star History Chart" />
-  </a>
-</p>
-
----
-
-<p align="center">
-  <sub>Built with ❤️ by the Tech Leads Club community</sub>
-</p>
+- Código-fonte, CLI e infraestrutura: MIT License. O aviso de copyright original
+  está preservado no arquivo LICENSE.
+- Skills individuais: cada arquivo SKILL.md preserva sua licença e autoria original.
+- Tradução, adaptações e manutenção deste fork: Peterson Benhame.

@@ -68,7 +68,7 @@ describe('buildLlmsTxt', () => {
   })
 
   it('lists the TLC landing pages under Optional', () => {
-    expect(output).toContain('- [TLC AI Dev Flow](https://agent-skills.techleads.club/tlc-ai-dev-flow/):')
-    expect(output).toContain('- [TLC Spec-Driven](https://agent-skills.techleads.club/tlc-spec-driven/):')
+    expect(output).toContain('- [TLC AI Dev Flow](https://agent-skills.techleads.club/pbs-ai-dev-flow/):')
+    expect(output).toContain('- [TLC Spec-Driven](https://agent-skills.techleads.club/pbs-spec-driven/):')
   })
 })

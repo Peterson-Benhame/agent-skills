@@ -34,7 +34,7 @@ export function filterAndSortSkillsWithMeta({
   searchQuery,
   selectedCategory,
   sortBy,
-  featuredSkillId = 'tlc-spec-driven',
+  featuredSkillId = 'pbs-spec-driven',
   searchIndex,
   categories,
 }: SkillsFilterInput): SkillsFilterResult {

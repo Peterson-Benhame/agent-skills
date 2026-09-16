@@ -5,7 +5,7 @@ import { Resvg } from '@resvg/resvg-js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const publicDir = join(__dirname, '../public')
-const logoSvg = readFileSync(join(publicDir, 'tlc-logo-dark.svg'), 'utf8')
+const logoSvg = readFileSync(join(publicDir, 'pbs-logo-dark.svg'), 'utf8')
 const logoMatch = logoSvg.match(/<svg[\s\S]*<\/svg>/)
 const logoInner = logoMatch?.[0]?.replace(/^<svg[^>]*>/, '').replace(/<\/svg>$/, '') ?? ''
 
@@ -60,7 +60,7 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
       <stop stop-color="#2563EB" stop-opacity="0.28"/>
       <stop offset="1" stop-color="#2563EB" stop-opacity="0"/>
     </radialGradient>
-    <clipPath id="tlc-icon">
+    <clipPath id="pbs-icon">
       <rect x="0" y="0" width="182" height="202"/>
     </clipPath>
   </defs>
@@ -68,7 +68,7 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
   <rect width="1200" height="630" fill="url(#bg)"/>
   <rect width="1200" height="630" fill="url(#glow)"/>
 
-  <g transform="translate(992, 64) scale(0.32)" clip-path="url(#tlc-icon)">
+  <g transform="translate(992, 64) scale(0.32)" clip-path="url(#pbs-icon)">
     ${logoInner}
   </g>
 
@@ -87,5 +87,5 @@ const resvg = new Resvg(svg, {
   fitTo: { mode: 'width', value: 1200 },
 })
 const pngData = resvg.render().asPng()
-writeFileSync(join(publicDir, 'og-tlc-ai-dev-flow.png'), pngData)
-console.log('Wrote packages/marketplace/public/og-tlc-ai-dev-flow.png')
+writeFileSync(join(publicDir, 'og-pbs-ai-dev-flow.png'), pngData)
+console.log('Wrote packages/marketplace/public/og-pbs-ai-dev-flow.png')

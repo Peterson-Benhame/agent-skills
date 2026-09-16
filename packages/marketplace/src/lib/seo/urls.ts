@@ -22,6 +22,6 @@ export const routes = {
   category: (id: string) => pathFor(['categories', id]),
   agents: () => pathFor(['agents']),
   agent: (id: string) => pathFor(['agents', id]),
-  specDriven: () => pathFor(['tlc-spec-driven']),
-  aiDevFlow: () => pathFor(['tlc-ai-dev-flow']),
+  specDriven: () => pathFor(['pbs-spec-driven']),
+  aiDevFlow: () => pathFor(['pbs-ai-dev-flow']),
 } as const

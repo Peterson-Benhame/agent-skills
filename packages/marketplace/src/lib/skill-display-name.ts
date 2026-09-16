@@ -2,7 +2,7 @@ import { findLineOutsideCodeFences } from './markdown-code-fences'
 
 /**
  * Derive a human-readable title from a kebab-case skill id.
- * Example: `tlc-spec-driven` → `Tlc Spec Driven`
+ * Example: `pbs-spec-driven` → `Tlc Spec Driven`
  */
 export function humanizeSkillId(id: string): string {
   return id

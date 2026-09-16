@@ -54,8 +54,8 @@ const mcpTools = [
 export default function AboutPage() {
   const featuredSkills = [...marketplaceData.skills]
     .sort((a, b) => {
-      if (a.id === 'tlc-spec-driven') return -1
-      if (b.id === 'tlc-spec-driven') return 1
+      if (a.id === 'pbs-spec-driven') return -1
+      if (b.id === 'pbs-spec-driven') return 1
       return a.name.localeCompare(b.name)
     })
     .slice(0, 8)

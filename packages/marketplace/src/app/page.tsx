@@ -12,7 +12,7 @@ import { graph, organizationSchema, websiteSchema } from '../lib/seo/schema'
 import { SITE_DESCRIPTION, SITE_NAME } from '../lib/seo/site'
 import { routes } from '../lib/seo/urls'
 
-const HERO_SKILL_ID = 'tlc-spec-driven'
+const HERO_SKILL_ID = 'pbs-spec-driven'
 const HERO_SKILL_DESCRIPTION =
   'Transforme seu agente de IA em um parceiro disciplinado de engenharia. Spec-Driven orienta cada projeto por 4 fases adaptativas — Specify, Design, Tasks, Execute — ajustando automaticamente o nível de profundidade conforme a complexidade. De correções rápidas de bugs até o desenvolvimento completo de features, ele produz commits atômicos, rastreabilidade de requisitos e memória persistente entre sessões. Independente de stack, sem configuração e compatível com qualquer agente de programação com IA.'
 
@@ -120,7 +120,7 @@ export default function HomePage() {
 
                   <h3 className="text-xl sm:text-2xl font-extrabold text-gray-900 dark:text-gray-100 mb-3 tracking-tight">
                     <Link
-                      href="/tlc-spec-driven"
+                      href="/pbs-spec-driven"
                       className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                     >
                       {heroSkill.name}
@@ -139,7 +139,7 @@ export default function HomePage() {
                     <CopyButton text={heroInstallCommand} />
 
                     <Link
-                      href="/tlc-spec-driven"
+                      href="/pbs-spec-driven"
                       className="px-5 py-2.5 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all shadow-md shadow-blue-600/20 flex items-center gap-1.5 text-sm"
                     >
                       Ver Skill →

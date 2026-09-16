@@ -80,7 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div className="flex items-center justify-between">
                 <Link href="/" className="flex items-center gap-2 sm:gap-3 hover:opacity-80 transition-opacity min-w-0">
                   <img
-                    src="/tlc-logo-dark.svg"
+                    src="/pbs-logo-dark.svg"
                     alt="Tech Leads Club"
                     className="h-6 sm:h-8 w-auto shrink-0 dark:hidden"
                   />

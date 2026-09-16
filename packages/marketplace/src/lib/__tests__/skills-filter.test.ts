@@ -24,7 +24,7 @@ const skills: Skill[] = [
     metadata: { hasScripts: false, hasReferences: false, referenceFiles: [], lastModified: '2026-01-01' },
   }),
   skill({
-    id: 'tlc-spec-driven',
+    id: 'pbs-spec-driven',
     name: 'TLC Spec Driven',
     category: 'process',
     metadata: { hasScripts: false, hasReferences: false, referenceFiles: [], lastModified: '2026-06-01' },
@@ -45,7 +45,7 @@ describe('filterAndSortSkills', () => {
       selectedCategory: null,
       sortBy: 'featured',
     })
-    expect(result.map((s) => s.id)).toEqual(['tlc-spec-driven', 'accessibility', 'zebra'])
+    expect(result.map((s) => s.id)).toEqual(['pbs-spec-driven', 'accessibility', 'zebra'])
   })
 
   it('filters by search query against display name', () => {
@@ -75,7 +75,7 @@ describe('filterAndSortSkills', () => {
       selectedCategory: null,
       sortBy: 'recent',
     })
-    expect(result.map((s) => s.id)).toEqual(['tlc-spec-driven', 'accessibility', 'zebra'])
+    expect(result.map((s) => s.id)).toEqual(['pbs-spec-driven', 'accessibility', 'zebra'])
   })
 
   it('ranks search results by relevance under the default featured sort', () => {
@@ -131,7 +131,7 @@ describe('filterAndSortSkills', () => {
       selectedCategory: null,
       sortBy: 'featured',
     })
-    expect(result.map((s) => s.id)).toEqual(['tlc-spec-driven'])
+    expect(result.map((s) => s.id)).toEqual(['pbs-spec-driven'])
   })
 })
 

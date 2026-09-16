@@ -1,6 +1,6 @@
 ---
-name: tlc-spec-lean
-description: 'Spec-driven feature work that freezes obligations instead of the plan: one human-reviewed plan with EARS criteria, path, entities, interface and one-way doors, then proof-backed checks, then build, then an independent Verifier. Use when the user says "tlc-spec-lean", "plan feature", "specify feature", "write the checks", "build this plan", or "verify work". Do NOT use for standalone design documents unattached to a feature, architecture decomposition analysis, or work that already has a task list or checklist to execute.'
+name: pbs-spec-lean
+description: 'Spec-driven feature work that freezes obligations instead of the plan: one human-reviewed plan with EARS criteria, path, entities, interface and one-way doors, then proof-backed checks, then build, then an independent Verifier. Use when the user says "pbs-spec-lean", "plan feature", "specify feature", "write the checks", "build this plan", or "verify work". Do NOT use for standalone design documents unattached to a feature, architecture decomposition analysis, or work that already has a task list or checklist to execute.'
 license: CC-BY-4.0
 metadata:
   author: Tech Leads Club - github.com/tech-leads-club
@@ -9,7 +9,7 @@ metadata:
 
 # Tech Lead's Club - Spec, Lean
 
-Freeze the obligations. Free the plan. Prove it with someone who did not build it. Derived from tlc-spec-driven 3.3.0 (Felipe Rodrigues), tlc-plan, and tlc-implement.
+Freeze the obligations. Free the plan. Prove it with someone who did not build it. Derived from pbs-spec-driven 3.3.0 (Felipe Rodrigues), pbs-plan, and pbs-implement.
 
 ```
 ┌──────┐   ┌────────┐   ┌───────┐   ┌────────┐
@@ -69,11 +69,11 @@ never scale down with the profile.
 ## Profile
 
 The project declares how much runs, in `AGENTS.md` or equivalent. Absent a declaration:
-`light`. Same three levels as `tlc-implement`, gated the same way, so moving between the two
+`light`. Same three levels as `pbs-implement`, gated the same way, so moving between the two
 skills needs no second vocabulary.
 
 ```markdown
-## tlc-spec-lean
+## pbs-spec-lean
 
 profile: light
 budget: 150k
@@ -100,7 +100,7 @@ omission structural, and that costs nothing at authoring time. What `standard` b
 Verifier **recomputing** it from the authority over each set instead of reading the author's
 table back.
 
-The profile is a pin, not a preference, and unlike `tlc-implement` that is enforced rather than
+The profile is a pin, not a preference, and unlike `pbs-implement` that is enforced rather than
 asked for: `validate_verification.py` fails a report whose profile differs from the one
 `checks.md` was approved under, and fails a `standard` report with no fault rows or no
 recomputed coverage, and a `ui` report with no binding-sources section. So a step that did not
@@ -276,7 +276,7 @@ project, and identifiers are never translated.
 
 ### Example 1: Plan a feature
 
-User says: "tlc-spec-lean — plan the lockfile v2 migration"
+User says: "pbs-spec-lean — plan the lockfile v2 migration"
 Actions:
 
 1. Read the repository and write `.specs/features/lockfile-v2/plan.md` (problem, EARS criteria, Flow, Relations, Surface, Landing, Impact)

@@ -1,6 +1,6 @@
 ---
-name: tlc-implement
-description: 'Implement a work already planned: extracts a checklist, builds it, and proves every check with an independent verifier. Use when the user says "extract a checklist", "build this ticket", "implement this spec", or "tlc-implement". Do NOT use when nobody has decided what to build, or to design the work.'
+name: pbs-implement
+description: 'Implement a work already planned: extracts a checklist, builds it, and proves every check with an independent verifier. Use when the user says "extract a checklist", "build this ticket", "implement this spec", or "pbs-implement". Do NOT use when nobody has decided what to build, or to design the work.'
 license: CC-BY-4.0
 metadata:
   author: Tech Leads Club - github.com/tech-leads-club
@@ -23,7 +23,7 @@ The thinking already happened somewhere else. Your job is to lose nothing from i
 The project chooses how much of this runs, in its `AGENTS.md` or equivalent:
 
 ```markdown
-## tlc-implement
+## pbs-implement
 
 profile: standard
 handoff: on

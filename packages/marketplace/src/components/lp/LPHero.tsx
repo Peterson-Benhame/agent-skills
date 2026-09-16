@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { CopyButton } from '../CopyButton'
 
-const INSTALL_CMD = 'npx @peterson-benhame/agent-skills install --skill tlc-spec-driven'
+const INSTALL_CMD = 'npx @peterson-benhame/agent-skills install --skill pbs-spec-driven'
 
 export function LPHero() {
   return (

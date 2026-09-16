@@ -22,7 +22,7 @@ import { updateSkills } from '../update.service'
  * a module-mocked suite silently exercised production code and only passed while the errors were
  * swallowed downstream. Fake ports are also how registry.service.spec.ts is written.
  */
-const SKILL = 'tlc-spec-driven'
+const SKILL = 'pbs-spec-driven'
 const HOME = '/home/tester'
 const CACHE_DIR = `${HOME}/.cache/agent-skills`
 const SKILL_CACHE = `${CACHE_DIR}/skills/${SKILL}`

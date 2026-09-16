@@ -1,23 +1,23 @@
 export const INSTALL_CMD =
-  'npx @peterson-benhame/agent-skills install --skill tlc-discover tlc-plan tlc-implement the-judge'
+  'npx @peterson-benhame/agent-skills install --skill pbs-discover pbs-plan pbs-implement the-judge'
 
 export const FLOW_SKILLS = [
   {
-    id: 'tlc-discover',
+    id: 'pbs-discover',
     tag: 'DISCOVER',
     color: 'bg-blue-600',
     title: 'Interview the idea',
     body: 'Turns an unshaped problem into a verdict and a design document with literal decisions. The expensive judgment lives here: the problem, the success metric, the architecture and the signatures, before a line of code exists.',
   },
   {
-    id: 'tlc-plan',
+    id: 'pbs-plan',
     tag: 'PLAN',
     color: 'bg-violet-500',
     title: 'Cut decided work into tasks',
     body: 'Takes work that is already decided and writes tasks a builder can act on without guessing. Each slice proves something. Criteria are observable outcomes with concrete values, not adjectives.',
   },
   {
-    id: 'tlc-implement',
+    id: 'pbs-implement',
     tag: 'IMPLEMENT',
     color: 'bg-emerald-500',
     title: 'Build, then prove it',

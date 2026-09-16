@@ -45,7 +45,7 @@ export default async function AgentPage({ params }: { params: Promise<{ agent: s
 
   const projectCommand = `npx @peterson-benhame/agent-skills install --agent ${agent.id}`
   const globalCommand = `${projectCommand} --global`
-  const exampleSkill = catalog.skills.find((skill) => skill.id === 'tlc-spec-driven') ?? catalog.skills[0]
+  const exampleSkill = catalog.skills.find((skill) => skill.id === 'pbs-spec-driven') ?? catalog.skills[0]
   const categories = populatedCategories()
 
   return (

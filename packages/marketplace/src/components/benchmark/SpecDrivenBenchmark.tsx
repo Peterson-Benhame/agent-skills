@@ -150,7 +150,7 @@ export function SpecDrivenBenchmark({ skillId }: SpecDrivenBenchmarkProps) {
         frameworks used {implementationModel} for both planning and implementation. Quality was scored by an auditable
         binary-check LLM judge.{' '}
         <a
-          href="https://github.com/tech-leads-club/agent-skills/tree/main/packages/skills-catalog/skills/(development)/tlc-spec-driven"
+          href="https://github.com/tech-leads-club/agent-skills/tree/main/packages/skills-catalog/skills/(development)/pbs-spec-driven"
           target="_blank"
           rel="noopener noreferrer"
           className="underline underline-offset-2 hover:text-gray-600 dark:hover:text-gray-400"

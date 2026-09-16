@@ -28,7 +28,7 @@ export function organizationSchema(): JsonLdNode {
     '@id': ORGANIZATION_ID,
     name: ORGANIZATION_NAME,
     url: ORGANIZATION_URL,
-    logo: absoluteUrl('/tlc-logo-dark.svg'),
+    logo: absoluteUrl('/pbs-logo-dark.svg'),
     sameAs: [ORGANIZATION_URL, REPOSITORY_URL, NPM_PACKAGE_URL],
   }
 }

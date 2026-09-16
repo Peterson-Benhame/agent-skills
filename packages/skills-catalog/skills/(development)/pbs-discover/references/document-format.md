@@ -2,7 +2,7 @@
 
 Load this file only when writing `.design/<name>.md` — after the verdict is confirmed, or after recording a committed decision. Do not load it during the interview.
 
-Section headings stay as they are — the next skill refers to them by name — while the prose follows the language of the document and identifiers are never translated. The document is for humans first: `tlc-plan` copies Decisions and the Shape literals, and Roadmap is the index a person reads before either.
+Section headings stay as they are — the next skill refers to them by name — while the prose follows the language of the document and identifiers are never translated. The document is for humans first: `pbs-plan` copies Decisions and the Shape literals, and Roadmap is the index a person reads before either.
 
 Replace every placeholder with a concrete value, or omit the section. A heading with "N/A" under it does not appear.
 
@@ -13,7 +13,7 @@ Write `.design/<name>.md`.
 ````markdown
 # <Title>
 
-> Plan this with **tlc-plan** (`<repo-relative path, when the project vendors the skill>`).
+> Plan this with **pbs-plan** (`<repo-relative path, when the project vendors the skill>`).
 > Decisions below carry the literal shape - copy them, do not re-derive them.
 
 ## Situation

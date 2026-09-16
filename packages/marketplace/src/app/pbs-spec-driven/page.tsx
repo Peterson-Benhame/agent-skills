@@ -12,8 +12,8 @@ export const metadata = buildPageMetadata({
   title: 'TLC Spec-Driven — AI Agents That Ship Right, Every Time',
   description:
     '4 adaptive phases, atomic tasks with verification criteria, and requirement traceability from spec to commit.',
-  path: pathFor(['tlc-spec-driven']),
-  ogImage: '/og-tlc-spec-driven.png',
+  path: pathFor(['pbs-spec-driven']),
+  ogImage: '/og-pbs-spec-driven.png',
   ogImageWidth: 1200,
   ogImageHeight: 630,
 })
@@ -27,7 +27,7 @@ export default function TLCSpecDrivenLandingPage() {
       <LPQuality />
       <LPSimplicity />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SpecDrivenBenchmark skillId="tlc-spec-driven" />
+        <SpecDrivenBenchmark skillId="pbs-spec-driven" />
       </div>
       <LPFinalCTA />
     </>

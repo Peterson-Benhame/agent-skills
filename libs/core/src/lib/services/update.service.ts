@@ -22,7 +22,7 @@ import { forceDownloadSkill, getSkillMetadata } from './registry.service'
  *
  * @example
  * ```ts
- * const results = await updateSkills(ports, ['tlc-spec-driven'])
+ * const results = await updateSkills(ports, ['pbs-spec-driven'])
  * const failed = results.filter((r) => !r.success)
  * ```
  */

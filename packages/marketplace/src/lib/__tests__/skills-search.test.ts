@@ -47,7 +47,7 @@ const skills: Skill[] = [
     content: '# Playwright\n\nUse for browser automation and documentação de testes.',
   }),
   skill({
-    id: 'tlc-spec-driven',
+    id: 'pbs-spec-driven',
     name: 'TLC Spec Driven',
     category: 'process',
     description: 'Spec driven development workflow.',
@@ -121,7 +121,7 @@ describe('searchSkills', () => {
 
   it('matches multi-word queries whose terms are not adjacent', () => {
     expect(ids('testing react')[0]).toBe('playwright-skill')
-    expect(ids('driven spec')).toContain('tlc-spec-driven')
+    expect(ids('driven spec')).toContain('pbs-spec-driven')
   })
 
   it('ranks skills matching every term above skills matching only some', () => {
@@ -162,7 +162,7 @@ describe('searchSkills', () => {
   })
 
   it('matches hyphenated ids typed with spaces and vice versa', () => {
-    expect(ids('spec-driven')).toContain('tlc-spec-driven')
+    expect(ids('spec-driven')).toContain('pbs-spec-driven')
     expect(ids('react best practices')[0]).toBe('react-best-practices')
   })
 
@@ -176,7 +176,7 @@ describe('searchSkills', () => {
   })
 
   it('honours quoted phrases as exact sequences', () => {
-    expect(ids('"spec driven"')).toContain('tlc-spec-driven')
+    expect(ids('"spec driven"')).toContain('pbs-spec-driven')
     expect(ids('"driven spec"')).toEqual([])
     expect(ids('"spec driven" zzzzzz').length).toBeGreaterThan(0)
   })

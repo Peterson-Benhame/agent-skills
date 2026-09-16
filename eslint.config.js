@@ -20,7 +20,7 @@ export default defineConfig([
     '**/postcss.config.cjs',
   ]),
   {
-    name: 'tlc-typescript',
+    name: 'pbs-typescript',
     files: ['**/*.ts'],
     languageOptions: { ecmaVersion: 2022, sourceType: 'module' },
     rules: {
